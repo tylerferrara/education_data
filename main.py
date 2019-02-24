@@ -30,7 +30,7 @@ def main():
                 reducePriceLunchEligible.append(row[17])
                 states.append(row[21])
                 studentTeachRatio.append(row[22])
-    
+
     # This function will automatically add
     # data to 'publicSchoolSpending' global variable
     publicSpending()
@@ -42,18 +42,18 @@ def main():
         avgStudentRate,
         freeLunchEligible
     ],
-    [   "states", 
-        "avg_student_rate", 
+    [   "states",
+        "avg_student_rate",
         "free_lunch_eligible"
     ])
 
     createNewFile('./bin/Reduced_Lunch_with_AVG_Student_Rate.csv', [
         states,
         avgStudentRate,
-        reducePriceLunchEligible 
+        reducePriceLunchEligible
     ],
-    [   "states", 
-        "avg_student_rate", 
+    [   "states",
+        "avg_student_rate",
         "reduced_lunch_eligible"
     ])
 
@@ -62,8 +62,8 @@ def main():
         avgStudentRate,
         indivEduProgram
     ],
-    [   "states", 
-        "avg_student_rate", 
+    [   "states",
+        "avg_student_rate",
         "individualized_education_programs"
     ])
 
@@ -72,8 +72,8 @@ def main():
         avgStudentRate,
         studentTeachRatio
     ],
-    [   "states", 
-        "avg_student_rate", 
+    [   "states",
+        "avg_student_rate",
         "student_teacher_ratio"
     ])
 
@@ -82,8 +82,8 @@ def main():
         avgStudentRate,
         publicSchoolSpending
     ],
-    [   "states", 
-        "avg_student_rate", 
+    [   "states",
+        "avg_student_rate",
         "state_funding_per_pupil"
     ])
 
@@ -94,18 +94,18 @@ def main():
         avgTeacherRate,
         freeLunchEligible
     ],
-    [   "states", 
-        "avg_teacher_rate", 
+    [   "states",
+        "avg_teacher_rate",
         "free_lunch_eligible"
     ])
 
     createNewFile('./bin/Reduced_Lunch_with_AVG_Teacher_Rate.csv', [
         states,
         avgTeacherRate,
-        reducePriceLunchEligible 
+        reducePriceLunchEligible
     ],
-    [   "states", 
-        "avg_teacher_rate", 
+    [   "states",
+        "avg_teacher_rate",
         "reduced_lunch_eligible"
     ])
 
@@ -114,8 +114,8 @@ def main():
         avgTeacherRate,
         indivEduProgram
     ],
-    [   "states", 
-        "avg_teacher_rate", 
+    [   "states",
+        "avg_teacher_rate",
         "individualized_education_programs"
     ])
 
@@ -124,8 +124,8 @@ def main():
         avgTeacherRate,
         studentTeachRatio
     ],
-    [   "states", 
-        "avg_teacher_rate", 
+    [   "states",
+        "avg_teacher_rate",
         "student_teacher_ratio"
     ])
 
@@ -134,8 +134,8 @@ def main():
         avgTeacherRate,
         publicSchoolSpending
     ],
-    [   "states", 
-        "avg_teacher_rate", 
+    [   "states",
+        "avg_teacher_rate",
         "state_funding_per_pupil"
     ])
 
@@ -159,7 +159,7 @@ def createNewFile(name, listOfData, titles):
             # increase index
             idx += 1
 
-# helper function for public school spending 
+# helper function for public school spending
 # will add data to global variable
 def publicSpending():
     list_to_sort = []
@@ -173,9 +173,9 @@ def publicSpending():
 
     # add total per pupil to global
     for row in list_to_sort:
-        publicSchoolSpending.append(row[1])
+        str = row[1]
+        publicSchoolSpending.append(str[1:])
 
 
 if __name__ == '__main__':
     main()
-
